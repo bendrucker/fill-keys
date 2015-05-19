@@ -1,6 +1,6 @@
 {
   "name": "fill-keys",
-  "main": "./src",
+  "main": "./release",
   "version": "1.0.0",
   "description": "Fill keys in a destination that are defined on the source",
   "license": "MIT",
