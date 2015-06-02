@@ -1,8 +1,8 @@
 'use strict'
 
-import mergeDescriptors from 'merge-descriptors'
-import isObject from 'is-object'
-const hasOwnProperty = Object.prototype.hasOwnProperty
+var mergeDescriptors = require('merge-descriptors')
+var isObject = require('is-object')
+var hasOwnProperty = Object.prototype.hasOwnProperty
 
 function fill (destination, source, merge) {
   if (destination && (isObject(source) || isFunction(source))) {
@@ -14,16 +14,16 @@ function fill (destination, source, merge) {
   return destination
 }
 
-export default function fillKeys (destination, source) {
+exports = module.exports = function fillKeys (destination, source) {
   return fill(destination, source, mergeDescriptors)
 }
 
-fillKeys.es3 = function fillKeysEs3 (destination, source) {
+exports.es3 = function fillKeysEs3 (destination, source) {
   return fill(destination, source, es3Merge)
 }
 
 function es3Merge (destination, source) {
-  for (let key in source) {
+  for (var key in source) {
     if (!hasOwnProperty.call(destination, key)) {
       destination[key] = source[key]
     }

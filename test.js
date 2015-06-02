@@ -1,13 +1,13 @@
 'use strict'
 
-import test from 'tape'
-import fillKeys from '../'
+var test = require('tape')
+var fillKeys = require('./')
 
-test('fill-keys', (t) => {
-  t.test('es5', (t) => {
+test('fill-keys', function (t) {
+  t.test('es5', function (t) {
     run(fillKeys, t)
 
-    let dest = {}
+    var dest = {}
     fillKeys(dest, Object.defineProperty({}, 'foo', {
       enumerable: true
     }))
@@ -16,7 +16,7 @@ test('fill-keys', (t) => {
     t.end()
   })
 
-  t.test('es3', (t) => {
+  t.test('es3', function (t) {
     run(fillKeys.es3, t)
     t.end()
   })
