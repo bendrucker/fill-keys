@@ -1,7 +1,7 @@
 {
   "name": "fill-keys",
   "main": "index.js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Fill keys in a destination that are defined on the source",
   "license": "MIT",
   "repository": "bendrucker/fill-keys",
