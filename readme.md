@@ -23,9 +23,7 @@ fill-keys will copy descriptors. It will also copy the `source.prototype` proper
 
 ## API
 
-### `fillKeys(destination, source)`
-
-Returns `destination`.
+#### `fillKeys(destination, source)` -> `destination`
 
 #### `destination`
 
@@ -36,14 +34,14 @@ The destination object where keys from `source` will be added.
 
 #### source
 
-*Required*
-Type: `any`  
+*Required*  
+Type: `any`
 
 The source object from which to copy properties.
 
-### `fillKeys.es3(destination, source)`
+#### `fillKeys.es3(destination, source)` -> `destination`
 
-An ES3-compatible version of `fillKeys`. Behavior is identical but simple assignment is used instead of `Object.defineProperty`. 
+An ES3-compatible version of `fillKeys`. Behavior is identical but simple assignment is used instead of `Object.defineProperty`.
 
 
 ## License
