@@ -7,7 +7,7 @@ var hasOwnProperty = Object.prototype.hasOwnProperty
 function fill (destination, source, merge) {
   if (destination && (isObject(source) || isFunction(source))) {
     merge(destination, source, false)
-    if (isFunction(destination) && isFunction(source)) {
+    if (isFunction(destination) && isFunction(source) && source.prototype) {
       merge(destination.prototype, source.prototype, false)
     }
   }

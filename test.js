@@ -42,3 +42,8 @@ function run (fill, t) {
 
   t.deepEqual(fill(Object.create(null), {foo: 'bar'}), {foo: 'bar'}, 'destination obj has no proto')
 }
+
+test('fn with no prototype', function (t) {
+  t.doesNotThrow(fillKeys.bind(null, function () {}, Date.now))
+  t.end()
+})
