@@ -40,6 +40,8 @@ function run (fill, t) {
   t.deepEqual(fill({}, undefined), {}, 'source undefined')
   t.deepEqual(fill(undefined, {}), undefined, 'dest undefined')
 
+  t.deepEqual(fill({foo: undefined}, {foo: 'bar'}), {foo: 'bar'}, 'destination obj has a property set to undefined')
+
   t.deepEqual(fill(Object.create(null), {foo: 'bar'}), {foo: 'bar'}, 'destination obj has no proto')
 }
 
