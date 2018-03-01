@@ -38,7 +38,9 @@ function run (fill, t) {
 
   var destArray = []
   fill(destArray, ['a', 'b', 'c'])
-  t.deepEqual(destArray, ['a', 'b', 'c'])
+  t.deepEqual(destArray, ['a', 'b', 'c'], 'fills the array when empty')
+  fill(destArray, ['x', 'y', 'z'])
+  t.deepEqual(destArray, ['a', 'b', 'c'], 'is a noop when the array is populated')
 
   t.equal(fill(undefined, undefined), undefined, 'both')
   t.deepEqual(fill({}, undefined), {}, 'source undefined')
