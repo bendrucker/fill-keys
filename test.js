@@ -27,7 +27,7 @@ test('fill-keys', function (t) {
 function run (fill, t) {
   t.deepEqual(fill({}, {foo: 'bar'}), {foo: 'bar'}, 'simple deep equality')
 
-  let dest = {}
+  var dest = {}
   fill(dest, {foo: 'bar'})
   t.deepEqual(dest, {foo: 'bar'}, 'mutates dest')
 
@@ -35,6 +35,10 @@ function run (fill, t) {
   function destFn () {}
   sourceFn.prototype = {foo: 'bar'}
   t.deepEqual(fill(destFn, sourceFn).prototype, {foo: 'bar'}, 'fills prototype')
+
+  var destArray = []
+  fill(destArray, ['a', 'b', 'c'])
+  t.deepEqual(destArray, ['a', 'b', 'c'])
 
   t.equal(fill(undefined, undefined), undefined, 'both')
   t.deepEqual(fill({}, undefined), {}, 'source undefined')
