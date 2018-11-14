@@ -1,4 +1,4 @@
-# fill-keys [![Build Status](https://travis-ci.org/bendrucker/fill-keys.svg?branch=master)](https://travis-ci.org/bendrucker/fill-keys)
+# fill-keys [![Build Status](https://travis-ci.org/bendrucker/fill-keys.svg?branch=master)](https://travis-ci.org/bendrucker/fill-keys) [![Greenkeeper badge](https://badges.greenkeeper.io/bendrucker/fill-keys.svg)](https://greenkeeper.io/)
 
 > Fill keys in a destination that are defined on the source. Copies descriptors so properties like `enumerable` will persist. 
 
