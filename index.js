@@ -1,8 +1,7 @@
 'use strict'
 
-var mergeDescriptors = require('merge-descriptors')
-var isObject = require('is-object')
-var hasOwnProperty = Object.prototype.hasOwnProperty
+const mergeDescriptors = require('merge-descriptors')
+const isObject = require('is-object')
 
 function fill (destination, source, merge) {
   if (destination && (isObject(source) || isFunction(source))) {

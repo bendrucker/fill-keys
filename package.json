@@ -22,12 +22,12 @@
     "copy"
   ],
   "dependencies": {
-    "is-object": "~1.0.1",
-    "merge-descriptors": "~1.0.0"
+    "is-object": "~1.0.2",
+    "merge-descriptors": "~1.0.1"
   },
   "devDependencies": {
-    "tape": "^4.0.0",
-    "standard": "^13.0.1"
+    "tape": "^5.6.1",
+    "standard": "^17.0.0"
   },
   "files": [
     "index.js",
