@@ -13,7 +13,7 @@ $ npm install --save fill-keys
 ## Usage
 
 ```js
-var fillKeys = require('fill-keys');
+const fillKeys = require('fill-keys')
 
 fillKeys(destination, source);
 //=> missing destination keys in source are copied
@@ -38,7 +38,6 @@ The destination object where keys from `source` will be added.
 Type: `any`
 
 The source object from which to copy properties.
-
 
 ## License
 
