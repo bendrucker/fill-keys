@@ -13,7 +13,7 @@ function fill (destination, source, merge) {
   return destination
 }
 
-exports = module.exports = function fillKeys (destination, source) {
+module.exports = function fillKeys (destination, source) {
   return fill(destination, source, mergeDescriptors)
 }
 
