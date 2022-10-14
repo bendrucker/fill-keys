@@ -39,10 +39,6 @@ Type: `any`
 
 The source object from which to copy properties.
 
-#### `fillKeys.es3(destination, source)` -> `destination`
-
-An ES3-compatible version of `fillKeys`. Behavior is identical but simple assignment is used instead of `Object.defineProperty`.
-
 
 ## License
 
